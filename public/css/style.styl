@@ -28,7 +28,7 @@ flexEnd()
 	display -webkit-flex
 	align-items flex-end
 body
-	background-color #efefef
+	background-color #fff
 	font-family $regular
 img
 	width 100%
@@ -51,6 +51,33 @@ p
 	width 100%
 	max-width 1150px
 	margin auto
+#evento
+	display none
+.contenidoEvento
+	display block
+	.table
+		td
+			font-size 16px !important
+			padding 12px 10px	
+			border-bottom 1px solid #9fd4c9
+			border-top none !important
+.mdlCard
+	max-width 600px
+	color #fff
+	padding 20px
+	h2
+		margin 5px 0
+		margin-top 0
+		font-size 20px 
+	a
+		color #fff
+		text-decoration underline !important
+	p 
+		margin 0
+.title-agenda
+	color #9fd4c9
+	font-size 30px
+	font-weight 600
 .header
 	position fixed
 	top 0
@@ -119,6 +146,9 @@ p
 	max-width 160px
 	font-family $medium
 	border 2px solid #01a982
+.js-option
+	padding-left 0
+	margin-bottom 10px
 .js-input
 	width 100%
 	border 1px solid rgba(0,0,0,0.15)
@@ -149,6 +179,8 @@ footer
 @media (max-width : 768px)
 	.header
 		background-color #000
+	.js-container
+		width 90%
 @media (max-width : 640px)
 	.js-contenido
 		padding 20px
@@ -156,4 +188,3 @@ footer
 			font-size 38px
 			line-height 42px
 			font-family $bold
-	

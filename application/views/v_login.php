@@ -41,72 +41,124 @@
 		</div>
 	</section>
 	<section id="register" class="js-section">
-		<div class="js-container">
-			<div class="row">
-				<div class="col-sm-6 col-md-4">
-					<div class="js-input js-select">
-						<select class="selectpicker">
-		  					<option>Bogotá</option>
-		  					<option>Buenos Aires</option>
-		  					<option>Ciudad de Mexico</option>
-		  					<option>Santiago</option>
-	 						<option>Sao Paulo</option>
-						</select>						
+		<div class="js-container row">
+			<form>
+				<div class="row">
+					<div class="col-sm-6 col-md-4 js-option">
+						<div class="js-input js-select col">
+							<select class="selectpicker error" id="selCiudad" name="celCiudad" onchange="cambiarLugar()" aria-invalid="true">
+								<option >--Seleccione ciudad--</option>
+			  					<option value="CDMX">CDMX, 13 de Setiembre 2018</option>
+			  					<option value="Mérida">Mérida, 5 de Setiembre 2018</option>
+			  					<option value="Guadalajara">Guadalajara, 15 de Agosto 2018</option>
+			  					<option value="Monterrey">Monterrey, 22 de Agosto 2018</option>
+		 						<option value="León">León, 29 de Agosto 2018</option>
+							</select>	
+							<label id="selCiudad-error" class="error" for="selCiudad" style="display:none;"></label>	
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="js-agenda">
-			</div>
-			<div class="js-title">
-				<h2>Regístrese completando el siguiente formulario</h2>
-			</div>
-			<div class="row">
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Nombre*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+				<div id ="evento" class="row contenidoEvento">
+					<div id="cardEvento" class="mdlCard">
+						<h2 id="lug"><a id="ulug" href=""></a></h2>
+						<p id="dir"></p>
+						<a href="#" data-toggle="modal" data-target="#modalMap">Ver mapa</a>
+					</div>
+					<h2 class="title-agenda">Agenda</h2>
+					<div class="tableResponsive">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td style="color: #ff8300 " >8:30 - 9:00</td>
+									<td>Registro</td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">9:00 - 9:15</td>
+									<td><strong>Bienvenida</strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">9:15 - 9:45</td>
+									<td><strong>Path de Certificación (Catálogo de cursos y track de Certificación)</strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">9:45 - 10:15</td>
+									<td><strong>Maqueta Switching y Movilidad</strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">10:15 - 10:30</td>
+									<td>Break</td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">10:30 - 10:45</td>
+									<td><strong>Plática Comercial (Portafolio de Soluciones y Oportunidad Comercial)</strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">10:45 - 11:00</td>
+									<td><strong>Demo Aruba Central como NOC<strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">11:00 - 11:15</td>
+									<td><strong>Práctica de Registro Aruba/HPE en vivo</strong></td>
+								</tr>
+								<tr>
+									<td style="color: #ff8300">11:15 - 11:30</td>
+									<td>Comida</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="js-title">
+					<h2>Regístrese completando el siguiente formulario</h2>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Nombre*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Apellido*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Email*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Telefono*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Nombre de Canal*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Cargo*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<div class="js-input">
+							<label for="text">Pais*</label>
+							<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
+						</div>
 					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Apellido*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
+				<div class="js-section--button text-left">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Enviar</button>
 				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Email*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
 				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Telefono*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Nombre de Canal*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Cargo*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<div class="js-input">
-						<label for="text">Pais*</label>
-						<input type="text" class="form-control" placeholder="" aria-describedby="sizing-addon1">
-					</div>
-				</div>
-			</div>
-			<div class="js-section--button text-left">
-				<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button">Enviar</button>
-			</div>
+			</form>
 		</div>
 	</section>
 	<footer class="js-section">
@@ -115,6 +167,20 @@
 			<p>©2018 Copyright Hewlett Packard Enterprise Development LP</p>
 		</div>
 	</footer>
+
+<!-- /.modal -->	 
+<div class="modal fade" id="modalMap" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="google-maps">
+      	<iframe id="map" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 	
 	
 </body>
